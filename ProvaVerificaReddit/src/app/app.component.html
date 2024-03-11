@@ -4,11 +4,11 @@
     <label for="mail">to</label>
   </div>
   <div>
-    <input type="text" name="ogg" #ogg>
-    <label for="ogg">oggetto</label>
+    <input type="text" name="oggetto" #ogg>
+    <label for="oggetto">oggetto</label>
   </div>
   <div>
-    <input type="text" name="corp" #corp>
+    <input type="text" name="corp" #corpo>
     <label for="corp">corpo</label>
   </div>
   
@@ -17,3 +17,6 @@
   </div>
 
 </form>
+<div class="container" *ngFor="let m of mail">
+  <app-mostra  [mostra]="m"></app-mostra>
+</div>

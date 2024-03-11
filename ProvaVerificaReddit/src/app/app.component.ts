@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Mail} from './mail.model';
+import {Mail} from './mostra/mail.model';
 @Component({ 
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +12,9 @@ export class AppComponent {
   }  
   newMail(to:HTMLInputElement,ogg:HTMLInputElement,corpo:HTMLInputElement):boolean{
     this.mail.push(new Mail(to.value,ogg.value,corpo.value))
-    to.value,ogg.value,corpo.value=""
+    to.value=""
+    ogg.value=""
+    corpo.value=""
     return false
   }
 }
