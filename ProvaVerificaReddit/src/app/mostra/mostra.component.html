@@ -1,9 +1,16 @@
-<div class=" container" style="border: 1 black;">
+
     <div class="card-header">
         <h3> {{ mostra.to }} from </h3><br>
         <h2>{{mostra.ogg}}</h2>
     </div>
-    <div class="card-body">
-        <p> {{ mostra.corpo }}</p>
+    <div class="card-body" *ngIf="vedere">
+        <p > {{ mostra.corpo }}</p>
     </div>
-</div>
+    <div>
+        <button (click)="vede()">espandi</button>
+        <div *ngIf="vedere">
+            <button (click)="special()">speciale</button>
+        </div>
+        
+    </div>
+
