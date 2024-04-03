@@ -1,0 +1,15 @@
+<div class="card-header">
+    <h1>commento di {{visual.nome}}</h1>
+</div>
+<div class="card-body">
+    <p>{{visual.conte}}</p><br>
+    <p>like = {{visual.vote}}</p>
+    <button (click)="like()">like</button><br>  
+</div>
+<div class="card-footer">
+    <input type="text"#commento> 
+    <button (click)="addcomm(commento)">commenta</button>
+</div>
+<div *ngFor="let c of comm">
+    <app-commenti [cosa]="c"></app-commenti>
+</div>

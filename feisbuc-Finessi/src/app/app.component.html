@@ -1,0 +1,8 @@
+<form>
+  <input type="text" #nome><br>
+  <input type="text" #cont>
+  <button (click)="addPost(nome,cont)">invia</button>
+</form>
+<div class="container"  *ngFor="let p of post">
+    <app-post-c [visual]="p"></app-post-c>
+</div>
